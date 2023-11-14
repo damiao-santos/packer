@@ -22,5 +22,14 @@
             "type": "shell",
             "inline": ["sudo mv /tmp/index.html /var/www/html/"]
         }
+    ],
+    "post-processors": [
+        {
+            "type": "manifest",
+            "output": "output.json"
+        },
+        {
+            "type": "vagrant"
+        }
     ]
 }

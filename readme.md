@@ -7,6 +7,11 @@
             "script": "setup.sh"
         }
     ]
+
 - Um outro provisioner é o File, que faz com que um arquivo que especifiquemos seja alocado no caminho informado.
+
 - o file provisioner pode ter um problema em relação a diretorios que são controlados pelo root, mas para contornar esse erro podemos copiar com o File para
 a pasta /tmp/ e depois usar um novo provisioner do tipo shell para mover o arquivo com o parametro inline.
+
+-Post-processor são processor que executam após a imagem ser criada, ha diversos modelos, no exemplo atual um gera um manifest com informações criadas da imagem
+e o outro gera vagrant box para ser utilizada localmente para testes.
