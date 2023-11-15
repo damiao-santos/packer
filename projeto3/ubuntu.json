@@ -2,7 +2,7 @@
     "builders": [
         {
         "type": "amazon-ebs",
-        "ami_name": "ubuntu-nginx-1311",
+        "ami_name": "{{user `description`}}-{{user `version`}}",
         "source_ami": "ami-0e83be366243f524a",
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu"
@@ -26,7 +26,7 @@
     "post-processors": [
         {
             "type": "manifest",
-            "output": "output.json"
+            "output": "{{user `description`}}.json"
         },
         {
             "type": "vagrant"
